@@ -19,6 +19,18 @@ yarn add meseret-utils
 npm i meseret-utils --save
 ```
 
+Then, we'll need to run the configuration script (at your app's entry) like:
+
+```ts
+import { configureMeseretUtils } from 'meseret-utils'
+
+import { serverApp } from './path/to/your/server-app/instance'
+
+configureMeseretUtils({
+  serverApp
+})
+```
+
 ### License
 
 Proudly, made with &hearts; in Addis Ababa.
