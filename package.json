@@ -1,0 +1,46 @@
+{
+  "name": "meseret-utils",
+  "version": "0.0.0",
+  "description": "A collection of handy utility functions and middleware compatible with meseret.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/kaleabmelkie/meseret-utils.git",
+  "author": "Kaleab S. Melkie <kaleab@kelaltech.com> (https://bit.ly/kaleab)",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "run-p": "run-p",
+    "run-s": "run-s",
+    "prepublishOnly": "run-s prod",
+    "clean": "del-cli dist",
+    "build": "tsc",
+    "lint": "prettier ./{*,src/**/*}.{ts,tsx,js,jsx,css,less,scss,sass,json,md,html}",
+    "format": "prettier --write ./{*,src/**/*}.{ts,tsx,js,jsx,css,less,scss,sass,json,md,html}",
+    "prod": "cross-env NODE_ENV=production run-s clean \"run-p format build\"",
+    "start": "run-s watch",
+    "watch": "tsc -w",
+    "test": "jest --passWithNoTests",
+    "test-live": "jest --passWithNoTests --watch",
+    "UNSAFE_upgrade": "yarn add @types/koa-passport @types/nodemailer @types/qs cross-env jest koa-passport meseret nodemailer --dev"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "run-s prod & git update-index --again"
+    }
+  },
+  "peerDependencies": {
+    "koa-passport": "^4.1.3",
+    "meseret": "^1.8.3",
+    "nodemailer": "^6.3.0"
+  },
+  "devDependencies": {
+    "@types/koa-passport": "^4.0.2",
+    "@types/nodemailer": "^6.2.1",
+    "@types/qs": "^6.5.3",
+    "cross-env": "^6.0.0",
+    "jest": "^24.9.0",
+    "koa-passport": "^4.1.3",
+    "meseret": "^1.8.3",
+    "nodemailer": "^6.3.0"
+  }
+}
