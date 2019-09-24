@@ -12,13 +12,10 @@ A collection of handy utility functions and middleware compatible with [meseret]
 To install, inside a [meseret](https://github.com/kaleabmelkie/meseret) project:
 
 ```bash
-# if you're using yarn:
-
 yarn add meseret-utils
 
 # or, using npm:
-
-npm i meseret-utils --save
+# npm i meseret-utils --save
 ```
 
 Then, we'll need to run the configuration/setup function (called `configureMeseretUtils`) at our app's entry like:
@@ -52,7 +49,7 @@ serverApp.start().catch(console.error)
 
 - [KoaController](src/lib/koa-controller/koa-controller.ts): a controller super-class that works hand-in-hand with our [handle](src/middleware/handle/handle.ts) middleware.
 
-- [KoaError](src/lib/koa-error/koa-error.ts): an extension of `Error` (with support for error `code` and HTTP `status`) that is compatible with [koa](https://koajs.com/) and our [handle](src/middleware/handle/handle.ts) middleware.
+- [KoaError](src/lib/koa-error/koa-error.ts): an extension of `Error` (with support for error `code` and HTTP `status`) that is compatible with [koa](https://koajs.com/) and our `handle` middleware.
 
 - [password](src/lib/password/password.ts): a pair of functions that assist in an account's password reset process.
 
@@ -62,7 +59,7 @@ serverApp.start().catch(console.error)
 
 ###### Koa Middleware
 
-- [authenticate](src/middleware/authenticate/authenticate.ts): handles account authentication checks using [koa-passport](https://www.npmjs.com/package/koa-passport), and handles errors graciously.
+- [authenticate](src/middleware/authenticate/authenticate.ts): handles account authentication checks using [koa-passport](https://www.npmjs.com/package/koa-passport) and responds to errors graciously.
 
 - [authorize](src/middleware/authorize/authorize.ts): handles authorization by account roles, after implicitly calling our `authenticate` middleware.
 
