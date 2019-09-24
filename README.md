@@ -7,7 +7,7 @@ A collection of handy utility functions and middleware compatible with [meseret]
 [![npm](https://img.shields.io/npm/dt/meseret-utils.svg?style=flat-square)](https://www.npmjs.org/package/meseret-utils)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-To install, inside a [meseret](https://github.com/kaleabmelkie/mesere) project (requires meseret v1.8.3 or higher):
+To install, inside a [meseret](https://github.com/kaleabmelkie/meseret) project (requires meseret v1.8.3 or higher):
 
 ```bash
 # if you're using yarn:

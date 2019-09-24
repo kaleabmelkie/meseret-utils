@@ -15,10 +15,11 @@ const globalState: IMeseretUtilsState = { _configured: false }
 export function configureMeseretUtils(
   configuration: IMeseretUtilsConfiguration
 ) {
-  Object.setPrototypeOf(globalState, {
-    _initiated: true,
+  const newGlobalState: IMeseretUtilsState = {
+    _configured: true,
     ...configuration
-  })
+  }
+  Object.setPrototypeOf(globalState, newGlobalState)
 }
 
 export function getMeseretUtilsState(): IMeseretUtilsConfiguration {
