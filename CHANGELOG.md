@@ -3,7 +3,7 @@
 #### v0.0.3
 
 - Add two new options for configuration: `applySslRedirect` and `addModels`.
-- Bug fix related to configuration state indicator
+- Bug fixes related to configuration and state indicator
 - Include TypeScript src in npm shipment for a better debugging experience.
 
 #### v0.0.2

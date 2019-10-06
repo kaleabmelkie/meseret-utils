@@ -46,7 +46,7 @@ export function configureMeseretUtils(
     _configured: true,
     ...configuration
   }
-  Object.setPrototypeOf(globalState, newGlobalState)
+  Object.assign(globalState, newGlobalState)
 }
 
 export function getMeseretUtilsState(): IMeseretUtilsConfiguration {
