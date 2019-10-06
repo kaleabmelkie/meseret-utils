@@ -52,7 +52,7 @@ export function configureMeseretUtils(
 export function getMeseretUtilsState(): IMeseretUtilsConfiguration {
   const { _configured, ...config } = globalState
 
-  if (_configured) {
+  if (!_configured) {
     throw new KoaError(
       '"meseret-utils" is not configured.',
       500,
