@@ -1,5 +1,11 @@
 # meseret-utils change log
 
+#### v0.0.3
+
+- Add two new options for configuration: `applySslRedirect` and `addModels`.
+- Bug fix related to configuration state indicator
+- Include TypeScript src in npm shipment for a better debugging experience.
+
 #### v0.0.2
 
 - Several package-architecture bug fixes
