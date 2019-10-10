@@ -12,11 +12,7 @@ export {} from './lib/photo-grid/photo-grid' // todo
 export * from './lib/transact/transact'
 
 // middleware
-export * from './middleware/authenticate/authenticate'
-export * from './middleware/authorize/authorize'
 export * from './middleware/handle/handle'
-export * from './middleware/login/login'
-export * from './middleware/logout/logout'
 export * from './middleware/ssl-redirect/ssl-redirect'
 
 // model

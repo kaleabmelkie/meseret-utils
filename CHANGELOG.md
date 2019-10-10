@@ -2,6 +2,7 @@
 
 #### v0.0.3
 
+- Remove four middleware (`authenticate`, `authorize`, `login` and `logout`) because they belong in an account module
 - Add two new options for configuration: `applySslRedirect` and `addModels`.
 - Bug fixes related to configuration and state indicator
 - Include TypeScript src in npm shipment for a better debugging experience.
