@@ -1,5 +1,9 @@
 # meseret-utils change log
 
+#### v0.0.4
+
+- Bug fix: use custom mongoose instance for `KeyModel`
+
 #### v0.0.3
 
 - Remove four middleware (`authenticate`, `authorize`, `login` and `logout`) because they belong in an account module
