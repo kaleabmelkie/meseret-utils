@@ -1,5 +1,9 @@
 # meseret-utils change log
 
+#### v0.0.5
+
+- Bug fix: missing dist folder in npm shipment
+
 #### v0.0.4
 
 - Bug fix: use custom mongoose instance for `KeyModel`
