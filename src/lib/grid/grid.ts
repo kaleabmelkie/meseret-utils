@@ -3,7 +3,7 @@ import { ServerApp } from 'meseret'
 import { Stream } from 'stream'
 import * as g from 'gridfs-stream'
 
-import { KoaError } from '../..'
+import { KoaError } from '../koa-error/koa-error'
 
 type ObjectId = Schema.Types.ObjectId | string
 

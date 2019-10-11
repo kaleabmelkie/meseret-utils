@@ -2,7 +2,8 @@ import { randomBytes } from 'crypto'
 import { ClientSession } from 'mongoose'
 
 import { IKey, KeyModel, IKeyPurpose } from './key-model'
-import { add, KoaError } from '../..'
+import { KoaError } from '../../lib/koa-error/koa-error'
+import { add } from '../../lib/crud/crud'
 
 export const keyStatics = {
   async cleanup({ session }: { session?: ClientSession } = {}): Promise<void> {

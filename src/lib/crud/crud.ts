@@ -8,7 +8,7 @@ import {
   Schema
 } from 'mongoose'
 
-import { KoaError } from '../..'
+import { KoaError } from '../koa-error/koa-error'
 
 type ObjectId = Schema.Types.ObjectId | string
 

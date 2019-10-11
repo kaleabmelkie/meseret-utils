@@ -1,7 +1,8 @@
 import { Context, Middleware, ParameterizedContext } from 'koa'
 import { ClientSession } from 'mongoose'
 
-import { transact, getMeseretUtilsState } from '../..'
+import { transact } from '../../lib/transact/transact'
+import { getMeseretUtilsState } from '../../state'
 
 type Constructor<T> = { new (...args: any[]): T }
 

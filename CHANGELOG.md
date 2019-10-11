@@ -1,5 +1,9 @@
 # meseret-utils change log
 
+### v0.0.6
+
+- Isolate state and pre-state imports to avoid several deadlocks and bugs
+
 #### v0.0.5
 
 - Bug fix: missing dist folder in npm shipment

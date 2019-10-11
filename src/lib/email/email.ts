@@ -1,6 +1,6 @@
 import { createTransport, SentMessageInfo } from 'nodemailer'
 
-import { KoaError } from '../..'
+import { KoaError } from '../koa-error/koa-error'
 
 export interface IEmailConfig {
   service?: string // default is 'gmail'

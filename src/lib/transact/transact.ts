@@ -1,6 +1,7 @@
 import { ClientSession } from 'mongoose'
 
-import { getMeseretUtilsState, KoaError } from '../..'
+import { getMeseretUtilsState } from '../../state'
+import { KoaError } from '../koa-error/koa-error'
 
 export async function transact<ReturnType>(
   operation: (session: ClientSession) => ReturnType
