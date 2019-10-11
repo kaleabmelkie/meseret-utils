@@ -1,6 +1,6 @@
 {
   "name": "meseret-utils",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A collection of handy utility functions and middleware compatible with meseret.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
