@@ -2,6 +2,7 @@
 
 ### v0.0.6
 
+- Limit public exports API of the library
 - Isolate state and pre-state imports to avoid several deadlocks and bugs
 
 #### v0.0.5
