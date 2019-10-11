@@ -24,8 +24,9 @@ export const keyModelFactory = new ModelFactory<IKey, {}, typeof keyStatics>({
   statics: keyStatics
 })
 
-export const KeySchema = keyModelFactory.schema
-KeySchema.index({
+export const keySchema = keyModelFactory.schema
+
+keySchema.index({
   _at: -1,
   purpose: true,
   email: true

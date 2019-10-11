@@ -16,7 +16,7 @@ export { handle } from './middleware/handle/handle'
 export { sslRedirect } from './middleware/ssl-redirect/ssl-redirect'
 
 // model
-export { KeyModel } from './models/key/key-model'
+export { KeyModel, keySchema, keyPurposes } from './models/key/key-model'
 
 // types
 export { ObjectId } from './types/object-id/object-id'
