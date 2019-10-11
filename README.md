@@ -75,6 +75,10 @@ serverApp.start().catch(console.error)
 
 - [KeyModel](src/models/key/key-model.ts): a mongoose data model used in our `password` reset functions to store unique keys (tokens).
 
+###### Types
+
+- [ObjectId](src/types/object-id/object-id.ts): a shortcut for the type `mongoose.Schema.Types.ObjectId | string`.
+
 ## License
 
 Proudly, made with &hearts; in Addis Ababa.

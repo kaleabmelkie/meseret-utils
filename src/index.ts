@@ -19,4 +19,4 @@ export { sslRedirect } from './middleware/ssl-redirect/ssl-redirect'
 export { KeyModel } from './models/key/key-model'
 
 // types
-// todo: export { ObjectId } from './types/object-id/object-id'
+export { ObjectId } from './types/object-id/object-id'
