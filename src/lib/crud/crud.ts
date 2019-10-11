@@ -4,13 +4,11 @@ import {
   DocumentQuery,
   Model,
   ModelUpdateOptions,
-  SaveOptions,
-  Schema
+  SaveOptions
 } from 'mongoose'
 
 import { KoaError } from '../koa-error/koa-error'
-
-type ObjectId = Schema.Types.ObjectId | string
+import { ObjectId } from '../../types/object-id/object-id'
 
 export type IAddOptions<T extends Document> = {
   session?: ClientSession

@@ -1,11 +1,10 @@
-import { Schema, Model, Document } from 'mongoose'
+import { Model, Document } from 'mongoose'
 import { ServerApp } from 'meseret'
 import { Stream } from 'stream'
 import * as g from 'gridfs-stream'
 
+import { ObjectId } from '../../types/object-id/object-id'
 import { KoaError } from '../koa-error/koa-error'
-
-type ObjectId = Schema.Types.ObjectId | string
 
 export class Grid {
   constructor(
