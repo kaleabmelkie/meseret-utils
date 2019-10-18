@@ -26,10 +26,12 @@ export const keyModelFactory = new ModelFactory<IKey, {}, typeof keyStatics>({
 
 export const keySchema = keyModelFactory.schema
 
-keySchema.index({
-  _at: -1,
-  purpose: true,
-  email: true
-})
-
 export const KeyModel = keyModelFactory.model
+
+KeyModel.collection
+  .createIndex({
+    _at: -1,
+    purpose: 1,
+    email: 1
+  })
+  .catch(console.error)
