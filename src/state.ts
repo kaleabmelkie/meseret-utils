@@ -1,12 +1,12 @@
 import { Document, Model, ServerApp } from 'meseret'
 
 import { sslRedirect } from './middleware/ssl-redirect/ssl-redirect'
-import { KeyModel } from './models/key/key-model'
+import { KeyModel } from './models/key-model'
 import { KoaError } from './lib/koa-error/koa-error'
 
 export type IMeseretUtilsState =
   | { _configured: false }
-  | { _configured: true } & IMeseretUtilsConfiguration
+  | ({ _configured: true } & IMeseretUtilsConfiguration)
 
 export type IMeseretUtilsConfiguration = {
   serverApp: ServerApp

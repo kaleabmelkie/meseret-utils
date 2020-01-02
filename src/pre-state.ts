@@ -3,7 +3,7 @@ import { KoaError } from './lib/koa-error/koa-error'
 
 export type IMeseretUtilsPreState =
   | { _configured: false }
-  | { _configured: true } & IMeseretUtilsPreConfiguration
+  | ({ _configured: true } & IMeseretUtilsPreConfiguration)
 
 export type IMeseretUtilsPreConfiguration = {
   mongooseInstance: typeof mongoose

@@ -35,7 +35,7 @@ export class KoaController {
     return this.ctx && this.ctx.request.body
   }
 
-  protected getUser<UserType>(): Document & UserType | null {
+  protected getUser<UserType>(): (Document & UserType) | null {
     return this.ctx && this.ctx.state.user
   }
 }

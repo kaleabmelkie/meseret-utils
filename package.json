@@ -30,11 +30,11 @@
   },
   "dependencies": {
     "meseret": "^1.9.2",
-    "nodemailer": "^6.3.1",
-    "qs": "^6.9.0"
+    "nodemailer": "^6.4.2",
+    "qs": "^6.9.1"
   },
   "devDependencies": {
-    "@types/nodemailer": "^6.2.1",
-    "@types/qs": "^6.5.3"
+    "@types/nodemailer": "^6.4.0",
+    "@types/qs": "^6.9.0"
   }
 }

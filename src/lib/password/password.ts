@@ -2,7 +2,7 @@ import { Model, Document, ClientSession } from 'mongoose'
 import { stringify } from 'qs'
 
 import { KoaError } from '../koa-error/koa-error'
-import { KeyModel } from '../../models/key/key-model'
+import { KeyModel } from '../../models/key-model'
 import { email } from '../email/email'
 
 type ModelThatCanSetPassword = Model<

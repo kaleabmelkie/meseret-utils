@@ -1,9 +1,38 @@
+import { ModelFactory } from 'meseret'
+import { ClientSession, Document, SchemaDefinition } from 'mongoose'
 import { randomBytes } from 'crypto'
-import { ClientSession } from 'mongoose'
 
-import { IKey, KeyModel, IKeyPurpose } from './key-model'
-import { KoaError } from '../../lib/koa-error/koa-error'
-import { add } from '../../lib/crud/crud'
+import { getMeseretUtilsPreState } from '../pre-state'
+import { KoaError } from '../lib/koa-error/koa-error'
+import { add } from '../lib/crud/crud'
+
+// todo: enumerate...
+export type IKeyPurpose = 'PASSWORD_RESET'
+export const keyPurposes: IKeyPurpose[] = ['PASSWORD_RESET']
+
+export interface IKey {
+  _at?: Date | number
+
+  purpose: IKeyPurpose
+  email?: string
+  randomKey: string
+  expiry?: Date
+}
+
+export const keyPaths: SchemaDefinition = {
+  _at: { type: Date, default: Date.now },
+
+  purpose: { type: String, required: true, enum: keyPurposes },
+  email: { type: String },
+  randomKey: { type: String, required: true },
+  expiry: {
+    type: Date,
+    required: true,
+    default: () => {
+      return Date.now() + 1000 * 60 * 60
+    }
+  }
+}
 
 export const keyStatics = {
   async cleanup({ session }: { session?: ClientSession } = {}): Promise<void> {
@@ -70,3 +99,24 @@ export const keyStatics = {
     await KeyModel.findOneAndRemove({ randomKey }).session(session || null)
   }
 }
+
+export type KeyDocumentType = Document & IKey
+
+export const keyModelFactory = new ModelFactory<IKey, {}, typeof keyStatics>({
+  mongooseInstance: getMeseretUtilsPreState().mongooseInstance,
+  name: 'key',
+  paths: keyPaths,
+  statics: keyStatics
+})
+
+export const keySchema = keyModelFactory.schema
+
+export const KeyModel = keyModelFactory.model
+
+KeyModel.collection
+  .createIndex({
+    _at: -1,
+    purpose: 1,
+    email: 1
+  })
+  .catch(console.error)
