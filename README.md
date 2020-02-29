@@ -59,15 +59,7 @@ serverApp.start().catch(console.error)
 
 ###### Koa Middleware
 
-- [authenticate](src/middleware/authenticate/authenticate.ts): handles account authentication checks using [koa-passport](https://www.npmjs.com/package/koa-passport) and responds to errors graciously.
-
-- [authorize](src/middleware/authorize/authorize.ts): handles authorization by account roles, after implicitly calling our `authenticate` middleware.
-
 - [handle](src/middleware/handle/handle.ts): a koa middleware that implicitly calls our `transact` function on our `koa-controller` methods and nicely handles our `koa-error` throws.
-
-- [login](src/middleware/login/login.ts): a helper koa middleware to quickly login to an account using `koa-passport`.
-
-- [logout](src/middleware/logout/logout.ts): a helper koa middleware to quickly logout from an account.
 
 - [sslRedirect](src/middleware/ssl-redirect/ssl-redirect.ts): a koa middleware that redirects all HTTP requests to HTTPS in "production" environments (unless other environments are passed to it).
 
