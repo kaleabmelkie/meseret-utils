@@ -55,7 +55,7 @@ serverApp.start().catch(console.error)
 
 - _[PhotoGrid](src/lib/photo-grid/photo-grid.ts): coming soon, in the next few feature releases._
 
-- [transact](src/lib/transact/transact.ts): an abstraction to quickly support MongoDB's session-based multi-document ACID-compatible transactions; these require MongoDB 4+.
+- [transact](src/lib/transact/transact.ts): an abstraction to quickly support MongoDB's session-based multi-document ACID-compatible transactions; this requires MongoDB 4+.
 
 ###### Koa Middleware
 
@@ -73,7 +73,7 @@ serverApp.start().catch(console.error)
 
 ###### Mongoose Models
 
-- [KeyModel](src/models/key/key-model.ts): a mongoose data model used in our `password` reset functions to store unique keys (tokens).
+- [KeyModel](src/models/key-model.ts): a mongoose data model used in our `password` reset functions to store unique keys (tokens).
 
 ###### Types
 
